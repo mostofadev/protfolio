@@ -1,5 +1,5 @@
 "use client";
-import Questions from "../component/AllPage/questions";
+import Questions from "../component/AllPage/Questions";
 import ServicesPricingCard from "../component/AllPage/ServicesPricingCard";
 import AllPageContainer from "../component/Container/AllPageContainer";
 import HomeTitleContainer from "../component/Container/HomeTitleContainer";

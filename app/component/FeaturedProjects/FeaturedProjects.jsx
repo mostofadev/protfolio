@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import HomeTitleContainer from "../Container/HomeTitleContainer";
 import FeaturedProjectCard from "./FeaturedProjectCard";
-import FeaturedProjectCardSkeleton from "../skeleton/FeaturedProjectCardSkeleton"; // ইমপোর্ট করো
+import FeaturedProjectCardSkeleton from "../Skeleton/FeaturedProjectCardSkeleton"; // ইমপোর্ট করো
 import { useHome } from "@/app/context/HomeContext";
 import HomeTitleSkeleton from "../Skeleton/HomeTitleSkeleton";
 

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import HomeTitleContainer from "../Container/HomeTitleContainer";
 import ServicesCard from "./ServicesCard";
-import HomeTitleSkeleton from "../skeleton/HomeTitleSkeleton";
-import ServicesCardSkeleton from "../skeleton/ServicesCardSkeleton";
+import HomeTitleSkeleton from "../Skeleton/HomeTitleSkeleton";
+import ServicesCardSkeleton from "../Skeleton/ServicesCardSkeleton";
 
 import webImage from '@/public/assets/img/web.png'
 import mobileImage from '@/public/assets/img/mobile.jpg'
