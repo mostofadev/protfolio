@@ -9,7 +9,7 @@ const instance = axios.create({
 })
 
 instance.interceptors.request.use((config) => {
-  const token = localStorage.getItem('admin_token');
+  const token = localStorage.getItem('auth-token');
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
@@ -21,8 +21,7 @@ instance.interceptors.response.use(
   error => {
     if (error.response?.status === 401) {
      
-      localStorage.removeItem('admin_token');
-      localStorage.removeItem('admin_user');
+      localStorage.removeItem('auth-token');
      // router.push('/admin/login');
     }
     return Promise.reject(error);

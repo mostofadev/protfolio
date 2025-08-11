@@ -6,7 +6,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const IMAGE_URL = process.env.NEXT_PUBLIC_STORAGE_URL || "http://127.0.0.1:8000/uploads";
 
-const BlogCard = ({ project, ClassName = "" }) => {
+export default function BlogCard({ project, ClassName = "" }) {
   const {
     image,
     title,
@@ -24,88 +24,93 @@ const BlogCard = ({ project, ClassName = "" }) => {
     : [];
 
   return (
-    <div
-      className={`bg-[var(--bg-one)] text-[var(--text-one)] border border-gray-600 dark:border-gray-700 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.02] ${ClassName}`}
-    >
-      {/* Blog Image */}
-      <div className="relative w-full h-56">
-        {image ? (
-          <Image
-            src={`${IMAGE_URL}/blog/${image}`}
-            alt={title}
-            fill
-            unoptimized
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        ) : (
-          <div className="flex items-center justify-center w-full h-full bg-gray-100 dark:bg-gray-700 text-gray-400">
-            No Image
-          </div>
-        )}
-      </div>
+    <div className={`swiper-slide !h-full !bg-transparent pb-5 !text-left ${ClassName}`}>
+      <div
+        className="grid h-full w-full cursor-pointer grid-rows-[200px_1fr] grid-cols-1 justify-end gap-3 overflow-hidden rounded-[10px] bg-[var(--bg-one)] bg-cover bg-center p-3 shadow-lg transition-all   hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02]"
+      >
+        {/* Blog Image */}
+        <div className="relative w-full h-full">
+          {image ? (
+            <Image
+              alt={title}
+              src={`${IMAGE_URL}/blog/${image}`}
+              fill
+              unoptimized
+              className="rounded-[8px] object-cover object-center"
+              loading="lazy"
+              decoding="async"
+            />
+          ) : (
+            <div className="flex items-center justify-center w-full h-full bg-gray-100 text-gray-400 rounded-[8px]">
+              No Image
+            </div>
+          )}
+        </div>
 
-      {/* Blog Content */}
-      <div className="p-5 space-y-3">
-        {/* Title */}
-        <h3 className="text-lg font-bold hover:text-green-600 transition-colors duration-200">
-          {title}
-        </h3>
+        {/* Blog Content */}
+        <div className="py-1 w-full space-y-2">
+          {/* Date */}
+          {created_at && (
+            <div className="mb-2 flex items-center gap-2">
+              <p className="text-xs font-medium text-[var(--primary-color)]">
+                {new Date(created_at).toLocaleDateString()}
+              </p>
+              <p className="text-sm font-medium">|</p>
+              <p className="text-xs font-medium text-primary-base">By : Admin</p>
+            </div>
+          )}
 
-        {/* Description */}
-        {description && (
-          <p className="text-sm text-[var(--text-two)] line-clamp-3">
-            {description.length > 100 ? description.slice(0, 100) + "..." : description}
-          </p>
-        )}
+          {/* Title */}
+          <h3 className="line-clamp-2 text-sm font-medium text-[var(--primary-color)]">
+            {title}
+          </h3>
 
-        {/* Technologies */}
-        {techs.length > 0 && (
-          <div className="flex flex-wrap gap-2">
-            {techs.map((tech, i) => (
-              <span
-                key={i}
-                className="px-3 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200 text-xs font-medium rounded-full"
+          {/* Description */}
+          {description && (
+            <p className="text-xs text-[var(--primary-color)] line-clamp-3">
+              {description.length > 120 ? description.slice(0, 120) + "..." : description}
+            </p>
+          )}
+
+          {/* Technologies */}
+          {techs.length > 0 && (
+            <div className="flex flex-wrap gap-2 pt-2">
+              {techs.map((tech, i) => (
+                <span
+                  key={i}
+                  className="px-2 py-1 bg-gray-200 text-[var(--primary-color)] text-[10px] font-medium rounded-full"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {/* Links */}
+          <div className="flex gap-3 pt-3 flex-wrap">
+            {demo_link && (
+              <Link
+                href={demo_link}
+                target="_blank"
+                className="flex items-center gap-1 bg-green-500 hover:bg-green-600 text-white px-2 py-1 rounded-md text-xs transition"
               >
-                {tech}
-              </span>
-            ))}
+                <FaExternalLinkAlt className="text-xs" />
+                Live Demo
+              </Link>
+            )}
+            {github_link && (
+              <Link
+                href={github_link}
+                target="_blank"
+                className="flex items-center gap-1 bg-gray-300 hover:bg-gray-400 text-gray-800 px-2 py-1 rounded-md text-xs transition"
+              >
+                <FaGithub className="text-xs" />
+                GitHub
+              </Link>
+            )}
           </div>
-        )}
-
-        {/* Created At */}
-        {created_at && (
-          <p className="text-xs text-gray-500 dark:text-gray-400">
-            Published: {new Date(created_at).toLocaleDateString()}
-          </p>
-        )}
-
-        {/* Links */}
-        <div className="flex gap-3 pt-3 flex-wrap">
-          {demo_link && (
-            <Link
-              href={demo_link}
-              target="_blank"
-              className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-md text-sm transition"
-            >
-              <FaExternalLinkAlt className="text-sm" />
-              Live Demo
-            </Link>
-          )}
-          {github_link && (
-            <Link
-              href={github_link}
-              target="_blank"
-              className="flex items-center gap-2 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-100 px-3 py-1 rounded-md text-sm transition"
-            >
-              <FaGithub className="text-sm" />
-              GitHub
-            </Link>
-          )}
         </div>
       </div>
     </div>
   );
-};
-
-export default BlogCard;
+}

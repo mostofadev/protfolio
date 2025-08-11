@@ -1,16 +1,16 @@
-'use client'
+"use client";
 
-import { AuthProvider } from "../context/AuthContext"
-import { BlogProvider } from "../context/BlogContext"
-import { BlogPageProvider } from "../context/BlogPageContext"
-import { CategoryProvider } from "../context/CategoryContext"
-import { HomeProvider } from "../context/HomeContext"
-import { PortfolioProvider } from "../context/PortfolioContext"
-import { PortfolioPageProvider } from "../context/PortfolioPageContext"
-import { TechnologyProvider } from "../context/TechnologyContext"
-import { TestimonialProvider } from "../context/TestimonialContext"
-import { ThemeProvider } from "../context/ThemeContext"
-
+import { AuthProvider } from "../context/AuthContext";
+import { BlogProvider } from "../context/BlogContext";
+import { BlogPageProvider } from "../context/BlogPageContext";
+import { CategoryProvider } from "../context/CategoryContext";
+import { HomeProvider } from "../context/HomeContext";
+import { PortfolioProvider } from "../context/PortfolioContext";
+import { PortfolioPageProvider } from "../context/PortfolioPageContext";
+import { SolveProvider } from "../context/solveContext";
+import { TechnologyProvider } from "../context/TechnologyContext";
+import { TestimonialProvider } from "../context/TestimonialContext";
+import { ThemeProvider } from "../context/ThemeContext";
 
 export default function ClientProvider({ children }) {
   return (
@@ -24,7 +24,9 @@ export default function ClientProvider({ children }) {
                   <HomeProvider>
                     <PortfolioPageProvider>
                       <BlogPageProvider>
-                        {children}
+                        <SolveProvider>
+                          {children}
+                        </SolveProvider>
                       </BlogPageProvider>
                     </PortfolioPageProvider>
                   </HomeProvider>
@@ -35,5 +37,5 @@ export default function ClientProvider({ children }) {
         </BlogProvider>
       </AuthProvider>
     </ThemeProvider>
-  )
+  );
 }

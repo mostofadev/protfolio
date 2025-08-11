@@ -7,32 +7,25 @@ import { usePortfolioPageContext } from "../context/PortfolioPageContext";
 import PagePagination from "../component/core/pagination/pagePagination";
 import FeaturedProjectCardSkeleton from "../component/Skeleton/FeaturedProjectCardSkeleton";
 import PagePaginationSkeleton from "../component/Skeleton/PagePaginationSkeleton";
+import { useSolve } from "../context/solveContext";
 
 function Portfolio() {
   const {
-    portfolio,
-    pagination,
-    loading,
-    error,
-    getPortfolioProjectsHandle,
-  } = usePortfolioPageContext();
+    FeaturedProjects,
+        loading,
+        SolveProject
+  } = useSolve();
 
-  const [currentPage, setCurrentPage] = useState(1);
-
+  
   useEffect(() => {
-    const fetchData = async () => {
-      // Start loading
-      await getPortfolioProjectsHandle(currentPage);
-      // Stop loading after fetch
-    };
-    fetchData();
-  }, [currentPage]);
+      SolveProject()
+  }, []);
 
-  const handlePageChange = (page) => {
-    if (page >= 1 && page <= pagination.last_page) {
-      setCurrentPage(page);
-    }
-  };
+  // const handlePageChange = (page) => {
+  //   if (page >= 1 && page <= pagination.last_page) {
+  //     setCurrentPage(page);
+  //   }
+  // };
 
   return (
     <Layout>
@@ -45,8 +38,8 @@ function Portfolio() {
               Array(6)
                 .fill(0)
                 .map((_, i) => <FeaturedProjectCardSkeleton key={i} />)
-            ) : portfolio && portfolio.length > 0 ? (
-              portfolio.map((project, index) => (
+            ) :     FeaturedProjects &&     FeaturedProjects.length > 0 ? (
+                  FeaturedProjects.map((project, index) => (
                 <FeaturedProjectCard
                   key={index}
                   project={project}
@@ -61,7 +54,7 @@ function Portfolio() {
           </div>
         </div>
 
-        <div className="pb-8">
+        {/* <div className="pb-8">
           {loading ? (
             <PagePaginationSkeleton />
           ) : (
@@ -70,7 +63,7 @@ function Portfolio() {
               onPageChange={handlePageChange}
             />
           )}
-        </div>
+        </div> */}
       </div>
     </Layout>
   );

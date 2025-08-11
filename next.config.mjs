@@ -13,6 +13,15 @@ const nextConfig = {
       },
     ],
   },
+
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://api.mostofadev.cloud/api/:path*', // Proxy API calls to your backend
+      },
+    ];
+  },
 };
 
 export default nextConfig;

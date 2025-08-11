@@ -9,21 +9,26 @@ import PagePagination from "../component/core/pagination/pagePagination";
 import BlogCardSkeleton from "../component/Skeleton/BlogCardSkeleton";
 import AllPageContainerSkeleton from "../component/Skeleton/AllPageContainerSkeleton";
 import PagePaginationSkeleton from "../component/Skeleton/PagePaginationSkeleton";
+import { useSolve } from "../context/solveContext";
 
 function Blog() {
-  const { blogs, pagination, loading, error, getBlogPostsHandle } =
-    useBlogPageContext();
-  const [currentPage, setCurrentPage] = useState(1);
+  const {
+        error,
+        Blog,
+        loading,
+        SolveBlog } =
+    useSolve();
+  // const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    getBlogPostsHandle(currentPage);
-  }, [currentPage]);
+    SolveBlog();
+  }, []);
 
-  const handlePageChange = (page) => {
-    if (page >= 1 && page <= pagination.last_page) {
-      setCurrentPage(page);
-    }
-  };
+  // const handlePageChange = (page) => {
+  //   if (page >= 1 && page <= pagination.last_page) {
+  //     setCurrentPage(page);
+  //   }
+  // };
 
   return (
     <Layout>
@@ -45,7 +50,7 @@ function Blog() {
               ? Array(6)
                   .fill(0)
                   .map((_, index) => <BlogCardSkeleton key={index} />)
-              : blogs.map((blog, index) => (
+              : Blog.map((blog, index) => (
                   <BlogCard
                     key={index}
                     project={blog}
@@ -57,7 +62,7 @@ function Blog() {
           </div>
         </div>
 
-        <div className="pb-4">
+        {/* <div className="pb-4">
           {loading ? <PagePaginationSkeleton /> : 
            <PagePagination
             pagination={pagination}
@@ -65,7 +70,7 @@ function Blog() {
           />
           }
          
-        </div>
+        </div> */}
       </div>
     </Layout>
   );
