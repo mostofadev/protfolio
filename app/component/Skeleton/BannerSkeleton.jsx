@@ -12,19 +12,19 @@ export const LeftBannerSkeleton = () => {
   return (
     <div className="overflow-hidden h-full relative z-0">
       <div className="mx-0 sm:mx-8 md:mx-20 flex flex-col justify-center items-center md:items-start h-full">
-        <div className="text-[var(--text-two)] px-4 sm:px-6 md:px-12 w-full z-10 text-center md:text-left">
+        <div className="text-[var(--text-two)]  sm:px-6  w-full z-10 text-center md:text-left">
           <h2 className="text-lg sm:text-xl font-extrabold uppercase mb-2">
             <Skeleton width={280} height={25} baseColor={baseColor} highlightColor={highlightColor} />
           </h2>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold my-4">
-            <Skeleton width={220} height={30} baseColor={baseColor} highlightColor={highlightColor} />
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold my-4 ">
+            <Skeleton width={200} height={30} baseColor={baseColor} highlightColor={highlightColor} />
           </h2>
-          <p className="text-base sm:text-lg md:text-xl mb-6 leading-relaxed tracking-wide opacity-80">
-            <Skeleton count={3} baseColor={baseColor} highlightColor={highlightColor} />
+          <p className="text-base  sm:text-lg md:text-xl mb-6 leading-relaxed tracking-wide opacity-80">
+            <Skeleton width={340} count={3} baseColor={baseColor} highlightColor={highlightColor} />
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
-            <Skeleton width={380} height={50} baseColor={baseColor} highlightColor={highlightColor} />
-            <Skeleton width={380} height={50} baseColor={baseColor} highlightColor={highlightColor} />
+          <div className="flex flex-col  sm:flex-row gap-4 justify-center md:justify-start items-center">
+            <Skeleton width={350} height={50} baseColor={baseColor} highlightColor={highlightColor} />
+            <Skeleton width={350} height={50} baseColor={baseColor} highlightColor={highlightColor} />
           </div>
         </div>
       </div>

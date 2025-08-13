@@ -12,7 +12,7 @@ function Resume() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000); // Simulate a loading delay of 2 seconds
+    }, 800); 
 
     return () => clearTimeout(timer); // Cleanup the timer on component unmount
   }, []);

@@ -37,7 +37,7 @@ export default function FeaturedProjects() {
               <FeaturedProjectCard
                 key={project.id}
                 project={project}
-                ClassName="border-gray-700 bg-[var(--bg-one)]"
+                ClassName=" bg-[var(--bg-one)]"
               />
             ))
           ) : (

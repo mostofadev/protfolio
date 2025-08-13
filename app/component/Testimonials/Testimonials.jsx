@@ -10,7 +10,7 @@ import HomeTitleSkeleton from "../Skeleton/HomeTitleSkeleton";
 import TestimonialCardSkeleton from "../Skeleton/TestimonialCardSkeleton";
 
 function Testimonials() {
-  const { fetchTestimonials, testimonials, loading } = useHome(); // Add loading state
+  const { fetchTestimonials, testimonials, loading } = useHome(); 
 
   const sliderSettings = {
     dots: true,

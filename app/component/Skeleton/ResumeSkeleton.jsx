@@ -12,7 +12,7 @@ const ResumeSkeleton = () => {
 
   return (
     <div
-      className={`my-12 max-w-4xl mx-auto p-6 space-y-10 select-none bg-[var(--bg-two)] ${highlightColor}`}
+      className={`my-12 px-12 max-w-4xl mx-auto p-6 space-y-10 select-none bg-[var(--bg-two)] ${highlightColor}`}
     >
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
@@ -21,14 +21,14 @@ const ResumeSkeleton = () => {
             baseColor={baseColor}
             highlightColor={highlightColor}
             height={32}
-            width="70%"
+            width="100%"
             borderRadius={8}
           />
           <Skeleton
             baseColor={baseColor}
             highlightColor={highlightColor}
             height={20}
-            width="50%"
+            width="100%"
             borderRadius={8}
           />
         </div>
@@ -36,7 +36,7 @@ const ResumeSkeleton = () => {
           baseColor={baseColor}
           highlightColor={highlightColor}
           height={44}
-          width={140}
+          width={240}
           borderRadius={8}
         />
       </div>
@@ -50,7 +50,7 @@ const ResumeSkeleton = () => {
               baseColor={baseColor}
               highlightColor={highlightColor}
               height={24}
-              width={224}
+              width={270}
             />
             <Skeleton
               baseColor={baseColor}

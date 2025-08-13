@@ -23,7 +23,7 @@ const AllPageContainerSkeleton = ({gray = true}) => {
         <Skeleton
           count={3}
           height={24}
-          width={460}
+          width={350}
           baseColor={baseColor}
           highlightColor={highlightColor}
           className="rounded"

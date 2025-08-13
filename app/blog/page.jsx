@@ -1,34 +1,26 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Layout from "../component/layout/Layout";
 import AllPageContainer from "../component/Container/AllPageContainer";
 import BlogCard from "../component/Blog/BlogCard";
-import { useBlogPageContext } from "../context/BlogPageContext";
 import PagePagination from "../component/core/pagination/pagePagination";
 import BlogCardSkeleton from "../component/Skeleton/BlogCardSkeleton";
 import AllPageContainerSkeleton from "../component/Skeleton/AllPageContainerSkeleton";
 import PagePaginationSkeleton from "../component/Skeleton/PagePaginationSkeleton";
-import { useSolve } from "../context/solveContext";
+import { usePage } from "../context/PageContext"; // এখানে নাম পরিবর্তন
 
 function Blog() {
   const {
-        error,
-        Blog,
-        loading,
-        SolveBlog } =
-    useSolve();
-  // const [currentPage, setCurrentPage] = useState(1);
+    error,
+    Blog,
+    loading,
+    fetchBlogs,  // এখানে SolveBlog থেকে fetchBlogs এ নাম পরিবর্তন
+  } = usePage();
 
   useEffect(() => {
-    SolveBlog();
+    fetchBlogs(); // এখানে SolveBlog() -> fetchBlogs()
   }, []);
-
-  // const handlePageChange = (page) => {
-  //   if (page >= 1 && page <= pagination.last_page) {
-  //     setCurrentPage(page);
-  //   }
-  // };
 
   return (
     <Layout>
@@ -57,11 +49,10 @@ function Blog() {
                     ClassName="bg-[var(--bg-two)]"
                   />
                 ))}
-
-            {}
           </div>
         </div>
 
+        {/* Pagination section commented out, কাজ করলে আবার ব্যবহার করতে পারো */}
         {/* <div className="pb-4">
           {loading ? <PagePaginationSkeleton /> : 
            <PagePagination
@@ -69,7 +60,6 @@ function Blog() {
             onPageChange={handlePageChange}
           />
           }
-         
         </div> */}
       </div>
     </Layout>

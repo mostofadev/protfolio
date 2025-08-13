@@ -3,8 +3,10 @@ import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import TButton from "../core/TButton";
 import Link from "next/link";
+import { useTheme } from "@/app/context/ThemeContext";
 
 const FeaturedProjectCard = ({ project, ClassName }) => {
+  const {theme} = useTheme();
   const IMAGE_URL = process.env.NEXT_PUBLIC_STORAGE_URL;
 
   const techs = project.technologies
@@ -17,7 +19,7 @@ const FeaturedProjectCard = ({ project, ClassName }) => {
 
   return (
     <div
-      className={`bg-[var(--bg-one)] text-[var(--text-one)] border border-gray-300 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1 hover:scale-[1.02] cursor-pointer ${ClassName}`}
+      className={`bg-[var(--bg-one)] text-[var(--text-one)] border ${theme === "dark" ? 'border-gray-200' : 'border-gray-700'}   rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1 hover:scale-[1.02] cursor-pointer ${ClassName}`}
     >
       {/* Image */}
       <div className="relative w-full h-56 rounded-xl overflow-hidden shadow-sm">
@@ -38,9 +40,13 @@ const FeaturedProjectCard = ({ project, ClassName }) => {
       </div>
 
       {/* Title */}
-      <h3 className="mt-4 text-xl font-bold tracking-tight">
+      <Link href={`/portfolio/${project.id}`}>
+         <h3 className="mt-4 text-xl font-bold tracking-tight">
+        
         {project.title}
       </h3>
+        </Link>
+     
 
       {/* Description */}
       <p className="mt-2 text-sm leading-relaxed line-clamp-3 text-[var(--text-two)]">

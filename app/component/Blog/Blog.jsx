@@ -2,13 +2,13 @@
 
 import { useHome } from "@/app/context/HomeContext";
 import HomeTitleContainer from "../Container/HomeTitleContainer";
-import BlogCard from "./BlogCard"; // Import skeleton
+import BlogCard from "./BlogCard"; 
 import { useEffect, useState } from "react";
 import BlogCardSkeleton from "../Skeleton/BlogCardSkeleton";
 import HomeTitleSkeleton from "../Skeleton/HomeTitleSkeleton";
 
 function Blog() {
-  const { fetchBlogs, blogs,loading } = useHome(); // include loading
+  const { fetchBlogs, blogs,loading } = useHome(); 
 
   useEffect(() => {
     fetchBlogs();

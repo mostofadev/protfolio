@@ -7,6 +7,10 @@ const nextConfig = {
         hostname: 'via.placeholder.com',
       },
       {
+        protocol: 'https',
+        hostname: 'api.mostofadev.cloud'
+      },
+      {
         protocol: 'http',
         hostname: 'localhost',
         port: '8000',

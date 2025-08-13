@@ -7,7 +7,7 @@ import { CategoryProvider } from "../context/CategoryContext";
 import { HomeProvider } from "../context/HomeContext";
 import { PortfolioProvider } from "../context/PortfolioContext";
 import { PortfolioPageProvider } from "../context/PortfolioPageContext";
-import { SolveProvider } from "../context/solveContext";
+import { PageProvider, SolveProvider } from "../context/PageContext";
 import { TechnologyProvider } from "../context/TechnologyContext";
 import { TestimonialProvider } from "../context/TestimonialContext";
 import { ThemeProvider } from "../context/ThemeContext";
@@ -24,9 +24,9 @@ export default function ClientProvider({ children }) {
                   <HomeProvider>
                     <PortfolioPageProvider>
                       <BlogPageProvider>
-                        <SolveProvider>
+                        <PageProvider>
                           {children}
-                        </SolveProvider>
+                        </PageProvider>
                       </BlogPageProvider>
                     </PortfolioPageProvider>
                   </HomeProvider>

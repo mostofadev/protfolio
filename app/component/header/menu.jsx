@@ -34,13 +34,13 @@ export default function Menu() {
     <Disclosure
       as="nav"
       className={`
-        w-full z-50 border-b border-gray-700/30 transition-all duration-500 ease-out
+        w-full z-50  transition-all duration-500 ease-out
         ${isScrolled
           ? 'fixed top-0 bg-white/10 backdrop-blur-lg shadow-xl text-[var(--text-one)]'
           : 'relative bg-[var(--bg-one)] text-[var(--text-one)] shadow-md'}
       `}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-12">
         <div className="relative flex h-20 items-center justify-between">
           {/* Mobile menu button */}
           <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
@@ -60,10 +60,10 @@ export default function Menu() {
 
           {/* Logo and Desktop Menu */}
           <div className="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
-            <div className="flex-shrink-0 flex items-center">
+            {/* <div className="flex-shrink-0 flex items-center">
               <Logo />
               <span className="ml-2 text-xs font-light text-gray-400 hidden lg:block tracking-wider">CREATIVE SOLUTIONS</span>
-            </div>
+            </div> */}
 
             <div className="hidden lg:ml-16 lg:flex lg:items-center">
               <div className="flex space-x-1">
@@ -74,7 +74,7 @@ export default function Menu() {
                       key={item.id}
                       href={item.to}
                       className={`relative px-4 py-2.5 text-sm font-medium transition-all duration-300
-                        ${isActive ? 'text-[var(--text-one)] border-b-2 border-white' : 'text-text-one hover:text-[var(--text-one)] hover:border-b hover:border-gray-400'}
+                        ${isActive ? 'text-[var(--text-one)] ' : 'text-text-one hover:text-[var(--text-one)] '}
                       `}
                     >
                       <div className="flex items-center gap-1">
@@ -120,7 +120,7 @@ export default function Menu() {
                 className={`block px-4 py-3 rounded-lg text-base font-medium w-full text-left
                   transition-all duration-300 transform
                   ${isActive
-                    ? 'text-white border-b-2 border-white'
+                    ? 'text-[var(--text-one)] '
                     : 'text-text-one hover:text-white hover:translate-x-1'}
                 `}
               >

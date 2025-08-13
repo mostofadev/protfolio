@@ -8,7 +8,7 @@ const BlogCardSkeleton = () => {
   const highlightColor = theme === "dark" ? "#f5f5f5" : "#4a5568";
 
   return (
-    <div className={`rounded-2xl border ${theme ? "border-gray-700" : "border-gray-600"} dark:border-gray-700 overflow-hidden shadow-sm bg-[var(--bg-one)] p-4 space-y-4`}>
+    <div className={`rounded-2xl border ${theme === "dark" ? "border-gray-100" : "border-gray-700"}  overflow-hidden shadow-sm bg-[var(--bg-one)] p-4 space-y-4`}>
       <Skeleton
         height={224}
         baseColor={baseColor}
