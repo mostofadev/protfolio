@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "MostofaDev - Web Developer & Designer",
   description: "I create professional, responsive websites using Next.js and React.",
-  // icons: { ... }  ---> এই অংশটা ডিলিট করে ফেলো যদি থাকে
+  
   openGraph: {
     title: "MostofaDev",
     description: "I create professional, responsive websites using Next.js and React.",
