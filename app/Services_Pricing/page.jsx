@@ -77,7 +77,7 @@ function ServicesPricing() {
         ) : (
           <AllPageContainer
             Title="Services & Pricing"
-            Description="I have 10+ years of development experience building software for the web and mobile devices. You can take a look at my online resume and project portfolio to find out more about my skills and experiences."
+            Description="I have 5+ years of development experience building software for the web and mobile devices. You can take a look at my online resume and project portfolio to find out more about my skills and experiences."
             Button="Hire Me"
           />
         )}

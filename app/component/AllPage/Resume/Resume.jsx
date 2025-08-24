@@ -106,21 +106,21 @@ const ResumeComponent = () => {
                 {
                   position: "Backend Developer & API Specialist",
                   company: "CodeCraft Systems",
-                  duration: "2020 - 2022",
+                  duration: "2020 - 2023",
                   description:
                     "Designed robust backend systems with Laravel and Node.js. Developed secure authentication systems, implemented role-based access control (RBAC), and created REST & GraphQL APIs for mobile/web integration.",
                 },
                 {
                   position: "Frontend Engineer",
                   company: "Creative UI Studio",
-                  duration: "2018 - 2020",
+                  duration: "2020- 2021",
                   description:
                     "Developed highly responsive and accessible UIs using React.js, Vue.js, Tailwind CSS, and Material UI. Integrated frontend with backend APIs and ensured cross-browser compatibility.",
                 },
                 {
                   position: "Web Hosting & Deployment Specialist",
                   company: "SmartHost Web Services",
-                  duration: "2016 - 2018",
+                  duration: "2020 - 2022",
                   description:
                     "Managed website deployment using cPanel, WHM, and domain/DNS configuration. Deployed Laravel and WordPress applications on shared and cloud hosting (VPS, DigitalOcean). Monitored server performance and automated backups.",
                 },

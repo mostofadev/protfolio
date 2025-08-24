@@ -33,7 +33,7 @@ function Contact() {
   }, []);
   const socialIcons = [
     {
-      Url: "https://github.com",
+      Url: "https://github.com/mostofadev/",
       Icon: (
         <svg
           className="w-6 h-6 text-[var(--text-two)]"
@@ -47,7 +47,7 @@ function Contact() {
       Name: "GitHub",
     },
     {
-      Url: "https://instagram.com",
+      Url: "https://www.instagram.com/mostofadev/",
       Icon: (
         <svg
           className="w-6 h-6 text-[var(--text-two)]"
@@ -60,7 +60,7 @@ function Contact() {
       Name: "Instagram",
     },
     {
-      Url: "https://twitter.com",
+      Url: "https://twitter.com/mostofadev",
       Icon: (
         <svg
           className="w-6 h-6 text-[var(--text-two)]"
@@ -73,7 +73,7 @@ function Contact() {
       Name: "Twitter",
     },
     {
-      Url: "https://linkedin.com",
+      Url: "https://www.linkedin.com/in/md-mostofa-kamal-0b181a282/",
       Icon: (
         <svg
           className="w-6 h-6 text-[var(--text-two)]"
@@ -101,7 +101,7 @@ function Contact() {
     {
       icon: <InboxArrowDownIcon className="w-6 h-6 text-white" />,
       title: "Email",
-      contact: "kmostofa479@gamil.com",
+      contact: "mostofakamalr2002@gmail.com",
     },
   ];
 
