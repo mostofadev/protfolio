@@ -45,7 +45,6 @@ export default function BlogTable() {
       DeleteBlogsHandle(id);
     }
   };
-console.log(blogs);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p className="p-4 text-red-500">Error: {error}</p>;

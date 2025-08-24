@@ -1,4 +1,4 @@
-import BtnSpinner from "../loader/BtnSpinner";
+import BtnSpinner from "../Loader/BtnLoading";
 
 export default function FormButton({ ClassName,Icon, IsValid, children, loading = false, ...props }) {
   return (

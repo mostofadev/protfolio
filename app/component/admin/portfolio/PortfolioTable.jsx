@@ -40,9 +40,6 @@ export default function PortfolioTable() {
       setCurrentPage(page);
     }
   };
-console.log(pagination);
-
-console.log(portfolios);
 
   const handleDelete = (id) => {
     if (confirm("Are you sure you want to delete this blog?")) {
