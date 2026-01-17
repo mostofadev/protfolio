@@ -14,7 +14,7 @@ const ResumeComponent = () => {
             Mostofa Kamal
           </h1>
           <p className="text-green-400 mt-1">
-            Senior Web Developer & UI Designer
+            Full-Stack Web Developer | Laravel • React • Next.js
           </p>
         </div>
         <button className="mt-4 md:mt-0 flex items-center px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors">
@@ -97,32 +97,32 @@ const ResumeComponent = () => {
             <div className="space-y-6">
               {[
                 {
-                  position: "Senior Full Stack Developer",
-                  company: "NextGen Solutions Ltd.",
+                  position: "Full Stack Developer",
+                  company: "Freelance / Self-employed",
                   duration: "2022 - Present",
                   description:
-                    "Architected and developed scalable web applications using Laravel (API), React.js, and Next.js. Integrated RESTful APIs, optimized MySQL queries, and led DevOps using cPanel and cloud servers (AWS, DigitalOcean).",
+                    "Architected and developed scalable web applications using Laravel (API), React.js, and Next.js. Integrated RESTful APIs, optimized MySQL queries, and  using cPanel",
                 },
                 {
                   position: "Backend Developer & API Specialist",
-                  company: "CodeCraft Systems",
+                  company: "Freelance / Self-employed",
                   duration: "2020 - 2023",
                   description:
-                    "Designed robust backend systems with Laravel and Node.js. Developed secure authentication systems, implemented role-based access control (RBAC), and created REST & GraphQL APIs for mobile/web integration.",
+                    "Designed robust backend systems with Laravel . Developed secure authentication systems, implemented role-based access control (RBAC), and created REST & GraphQL APIs for mobile/web integration.",
                 },
                 {
                   position: "Frontend Engineer",
-                  company: "Creative UI Studio",
+                  company: "Freelance / Self-employed",
                   duration: "2020- 2021",
                   description:
-                    "Developed highly responsive and accessible UIs using React.js, Vue.js, Tailwind CSS, and Material UI. Integrated frontend with backend APIs and ensured cross-browser compatibility.",
+                    "Developed highly responsive and accessible UIs using React.js, Tailwind CSS, and Material UI. Integrated frontend with backend APIs and ensured cross-browser compatibility.",
                 },
                 {
                   position: "Web Hosting & Deployment Specialist",
-                  company: "SmartHost Web Services",
+                  company: "Freelance / Self-employed",
                   duration: "2020 - 2022",
                   description:
-                    "Managed website deployment using cPanel, WHM, and domain/DNS configuration. Deployed Laravel and WordPress applications on shared and cloud hosting (VPS, DigitalOcean). Monitored server performance and automated backups.",
+                    "Managed website deployment using cPanel, WHM, and handled domain & DNS configuration.",
                 },
               ].map((job, index) => (
                 <div
@@ -171,24 +171,26 @@ const ResumeComponent = () => {
               {[
                 {
                   title: "E-commerce Platform",
-                  description: "Built with React, Node.js, and MongoDB",
-                  link: "#",
+                  description: "Built with React, Next.js,Laravel and MySql",
+                  link: "https://ecommerce-frontend-k2ca.vercel.app",
                 },
                 {
                   title: "Portfolio CMS",
                   description: "Custom CMS for artists and designers",
-                  link: "#",
+                  link: "https://www.mostofadev.com/",
                 },
                 {
-                  title: "Task Management App",
-                  description: "Real-time collaboration features",
-                  link: "#",
+                  title: "Real Estate Listing Platform",
+                  description: "Full-stack real estate app with property listings, search filters, galleries, real-time collaboration, Google Maps, and secure authentication.",
+                  link: "https://real-estate-platform-gvlr.vercel.app"
                 },
+
                 {
-                  title: "Weather Dashboard",
-                  description: "With 5-day forecast and geolocation",
-                  link: "#",
+                  title: "Hospital Management System",
+                  description: "Full-stack hospital management app with patient records, appointment scheduling, doctor dashboard, and real-time updates for efficient hospital operations.",
+                  link: "https://health.mostofadev.cloud/"
                 },
+
               ].map((project, index) => (
                 <div
                   key={index}
@@ -245,7 +247,6 @@ const ResumeComponent = () => {
                 { name: "Laravel", level: 90 },
                 { name: "Bootstrap", level: 80 },
                 { name: "CSS3", level: 85 },
-                { name: "CDN Integration", level: 80 },
                 { name: "REST API", level: 85 },
                 { name: "MySQL", level: 80 },
                 { name: "cPanel", level: 85 },
@@ -274,27 +275,27 @@ const ResumeComponent = () => {
 
           {/* Education */}
           <div className="bg-[var(--bg-two)] rounded-xl p-6">
-  <div className="flex items-center mb-4">
-    <AcademicCapIcon className="w-6 h-6 text-green-400 mr-2" />
-    <h2 className="text-xl font-bold text-[var(--text-one)]">
-      Education
-    </h2>
-  </div>
+            <div className="flex items-center mb-4">
+              <AcademicCapIcon className="w-6 h-6 text-green-400 mr-2" />
+              <h2 className="text-xl font-bold text-[var(--text-one)]">
+                Education
+              </h2>
+            </div>
 
-  <div className="space-y-4">
-    <div className="pl-8 border-l-2 border-green-500 relative">
-      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-green-500"></div>
-      <h3 className="text-[var(--text-one)] font-medium">
-        B.A. (Honours) in English — 2nd Year
-      </h3>
-      <p className="text-[var(--text-two)] text-sm mt-1">
-        [Your College Name], [Your University Name] • 2022 - Present
-      </p>
-    </div>
+            <div className="space-y-4">
+              <div className="pl-8 border-l-2 border-green-500 relative">
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-green-500"></div>
+                <h3 className="text-[var(--text-one)] font-medium">
+                  B.A. (Honours) in English — 3nd Year
+                </h3>
+                <p className="text-[var(--text-two)] text-sm mt-1">
+                  Lalmonirhat Govt. College • 2026 - Present
+                </p>
+              </div>
 
-    {/* আরও কিছু যোগ করতে চাইলে নিচে নতুন div তৈরি করো */}
-    {/* Example: */}
-    {/* <div className="pl-8 border-l-2 border-green-500 relative">
+              {/* আরও কিছু যোগ করতে চাইলে নিচে নতুন div তৈরি করো */}
+              {/* Example: */}
+              {/* <div className="pl-8 border-l-2 border-green-500 relative">
       <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-green-500"></div>
       <h3 className="text-[var(--text-one)] font-medium">
         Higher Secondary Certificate (HSC)
@@ -303,8 +304,8 @@ const ResumeComponent = () => {
         [College Name] • 2020 - 2022
       </p>
     </div> */}
-  </div>
-</div>
+            </div>
+          </div>
 
           {/* Languages */}
           <div className="bg-[var(--bg-two)] rounded-xl p-6">
@@ -330,8 +331,8 @@ const ResumeComponent = () => {
             <div className="space-y-3">
               {[
                 { language: "English", level: "Fluent" },
-                { language: "Spanish", level: "Intermediate" },
-                { language: "Hindi", level: "Native" },
+                // { language: "Hindi", level: "Intermediate" },
+                { language: "Bangla", level: "Native" },
               ].map((item, index) => (
                 <div key={index} className="flex justify-between">
                   <span className="text-[var(--text-two)]">
