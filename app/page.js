@@ -40,7 +40,7 @@ export default function Home() {
       <WhatIDo />
       <FeaturedProjects />
       <Testimonials />
-      <Blog />
+      {/* <Blog /> */}
   </Layout>
   </>
   );

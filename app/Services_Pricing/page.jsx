@@ -27,7 +27,7 @@ function ServicesPricing() {
   const cardData = [
     {
       title: "Basic",
-      price: "900",
+      price: "700",
       duration: "Per Month",
       features: [
         "Web Development",
@@ -41,7 +41,7 @@ function ServicesPricing() {
     },
     {
       title: "Standard",
-      price: "1500",
+      price: "1000",
       duration: "Per Month",
       features: [
         "Advanced Development",
@@ -55,7 +55,7 @@ function ServicesPricing() {
     },
     {
       title: "Premium",
-      price: "2500",
+      price: "1500",
       duration: "Per Month",
       features: [
         "Full-Stack Development",
@@ -77,12 +77,12 @@ function ServicesPricing() {
         ) : (
           <AllPageContainer
             Title="Services & Pricing"
-            Description="I have 5+ years of development experience building software for the web and mobile devices. You can take a look at my online resume and project portfolio to find out more about my skills and experiences."
+            Description="I have 3+ years of development experience building software for the web and mobile devices. You can take a look at my online resume and project portfolio to find out more about my skills and experiences."
             Button="Hire Me"
           />
         )}
 
-        <div className=" bg-[var(--bg-one)] p-4 sm:p-6 md:p-10">
+        <div className=" bg-[var(--bg-one)] p-2 sm:p-6 md:p-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {loading ? (
               <>
@@ -121,7 +121,7 @@ function ServicesPricing() {
         
         
         <div className="bg-[var(--bg-one)] ">
-          <div className="flex justify-between items-center  mx-6 sm:mx-20 lg:mx-20">
+          <div className="flex justify-between items-center  mx-2 sm:mx-20 lg:mx-20">
             <div className=" w-full  lg:w-1/2 ">
               {" "}
               {/* Set width to 50% */}

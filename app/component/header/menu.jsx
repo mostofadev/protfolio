@@ -14,7 +14,7 @@ const navigation = [
   { name: 'Portfolio', to: '/portfolio', id: 3 },
   { name: 'Services & Pricing', to: '/Services_Pricing', id: 4 },
   { name: 'Resume', to: '/resume', id: 5 },
-  { name: 'Blog', to: '/blog', id: 6 },
+  // { name: 'Blog', to: '/blog', id: 6 },
   { name: 'Contact Us', to: '/contact', id: 7 },
 ];
 

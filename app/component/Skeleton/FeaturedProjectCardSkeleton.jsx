@@ -34,16 +34,16 @@ const FeaturedProjectCardSkeleton = () => {
       />
 
       {/* Description */}
-      <Skeleton
+      {/* <Skeleton
         baseColor={baseColor}
         highlightColor={highlightColor}
         count={2}
         height={18}
         className="mb-5 rounded"
-      />
+      /> */}
 
       {/* Technologies badges */}
-      <div className="flex flex-wrap gap-3 mb-6">
+      {/* <div className="flex flex-wrap gap-3 mb-6">
         {Array(3)
           .fill(0)
           .map((_, i) => (
@@ -56,10 +56,10 @@ const FeaturedProjectCardSkeleton = () => {
               borderRadius={14}
             />
           ))}
-      </div>
+      </div> */}
 
       {/* Category and Tech */}
-      <div className="flex flex-wrap gap-4 text-base mb-3">
+      {/* <div className="flex flex-wrap gap-4 text-base mb-3">
         <Skeleton
           baseColor={baseColor}
           highlightColor={highlightColor}
@@ -74,7 +74,7 @@ const FeaturedProjectCardSkeleton = () => {
           height={20}
           className="rounded"
         />
-      </div>
+      </div> */}
       {/* Buttons */}
       <div className="flex flex-wrap gap-4">
         <Skeleton

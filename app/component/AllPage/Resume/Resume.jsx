@@ -106,21 +106,21 @@ const ResumeComponent = () => {
                 {
                   position: "Backend Developer & API Specialist",
                   company: "Freelance / Self-employed",
-                  duration: "2020 - 2023",
+                  duration: "2022 - 2023",
                   description:
                     "Designed robust backend systems with Laravel . Developed secure authentication systems, implemented role-based access control (RBAC), and created REST & GraphQL APIs for mobile/web integration.",
                 },
                 {
                   position: "Frontend Engineer",
                   company: "Freelance / Self-employed",
-                  duration: "2020- 2021",
+                  duration: "2023- 2024",
                   description:
                     "Developed highly responsive and accessible UIs using React.js, Tailwind CSS, and Material UI. Integrated frontend with backend APIs and ensured cross-browser compatibility.",
                 },
                 {
                   position: "Web Hosting & Deployment Specialist",
                   company: "Freelance / Self-employed",
-                  duration: "2020 - 2022",
+                  duration: "2024 - 2025",
                   description:
                     "Managed website deployment using cPanel, WHM, and handled domain & DNS configuration.",
                 },

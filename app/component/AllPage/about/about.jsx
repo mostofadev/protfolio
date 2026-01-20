@@ -21,7 +21,7 @@ const AboutSection = ({loading}) => {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20"></div>
             </div>
             <div className="absolute -bottom-6 -right-6 bg-green-500 text-white p-4 rounded-xl shadow-lg hidden md:block">
-              <div className="text-3xl font-bold">5+</div>
+              <div className="text-3xl font-bold">3+</div>
               <div className="text-sm">Years Experience</div>
             </div>
           </div>
@@ -33,7 +33,7 @@ const AboutSection = ({loading}) => {
   </h2>
 
   <p className="text-lg text-[var(--text-two)]">
-    I’m a Senior Full Stack Developer with over 5 years of experience in building scalable web applications and APIs. I specialize in Laravel, React.js, and Next.js, with deep expertise in both frontend and backend technologies.
+    I’m a Full Stack Developer with over 3 years of experience in building scalable web applications and APIs. I specialize in Laravel, React.js, and Next.js, with deep expertise in both frontend and backend technologies.
   </p>
 
   <p className="text-[var(--text-two)]">

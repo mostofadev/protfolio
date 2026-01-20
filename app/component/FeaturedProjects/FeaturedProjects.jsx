@@ -27,7 +27,7 @@ export default function FeaturedProjects() {
       
 
       <div className="bg-[var(--bg-two)] py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-8 mx-6 sm:mx-20 md:mx-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8 mx-2 sm:mx-20 md:mx-20">
           {loading ? (  
             Array(6).fill(0).map((_, i) => (
               <FeaturedProjectCardSkeleton key={i} />

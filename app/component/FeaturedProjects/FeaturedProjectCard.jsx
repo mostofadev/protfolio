@@ -19,7 +19,7 @@ const FeaturedProjectCard = ({ project, ClassName }) => {
 
   return (
     <div
-      className={`bg-[var(--bg-one)] text-[var(--text-one)] border ${theme === "dark" ? 'border-gray-200' : 'border-gray-700'}   rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1 hover:scale-[1.02] cursor-pointer ${ClassName}`}
+      className={`bg-[var(--bg-one)] text-[var(--text-one)] border ${theme === "dark" ? 'border-gray-200' : 'border-gray-700'}   rounded-2xl p-2 shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1 hover:scale-[1.02] cursor-pointer ${ClassName}`}
     >
       {/* Image */}
       <div className="relative w-full h-56 rounded-xl overflow-hidden shadow-sm">
@@ -49,12 +49,12 @@ const FeaturedProjectCard = ({ project, ClassName }) => {
      
 
       {/* Description */}
-      <p className="mt-2 text-sm leading-relaxed line-clamp-3 text-[var(--text-two)]">
+      {/* <p className="mt-2 text-sm leading-relaxed line-clamp-3 text-[var(--text-two)]">
         {project.description}
-      </p>
+      </p> */}
 
       {/* Technologies */}
-      <div className="mt-4 flex flex-wrap gap-2">
+      {/* <div className="mt-4 flex flex-wrap gap-2">
         {techs.map((tech, i) => (
           <span
             key={i}
@@ -63,17 +63,17 @@ const FeaturedProjectCard = ({ project, ClassName }) => {
             {tech}
           </span>
         ))}
-      </div>
+      </div> */}
 
       {/* Category and Technology */}
-      <div className="mt-4 flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-400">
+      {/* <div className="mt-4 flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-400">
         <span>
           <strong>Category:</strong> {project.category?.name || "N/A"}
         </span>
         <span>
           <strong>Tech:</strong> {project.technology?.name || "N/A"}
         </span>
-      </div>
+      </div> */}
 
       {/* Completed Date */}
       <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -81,11 +81,11 @@ const FeaturedProjectCard = ({ project, ClassName }) => {
       </p>
 
       {/* Team Info */}
-      <p className="mt-1 italic text-sm text-gray-500 dark:text-gray-400">
+      {/* <p className="mt-1 italic text-sm text-gray-500 dark:text-gray-400">
         {project.is_team_project
           ? `Team Role: ${project.team_role || "Member"}`
           : "Individual Project"}
-      </p>
+      </p> */}
 
       {/* Links */}
       <div className="mt-5 flex flex-wrap gap-3">

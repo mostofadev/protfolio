@@ -7,7 +7,7 @@ function ServicesCard({ services }) {
   return (
     <section className="py-12 bg-[var(--bg-one)] cursor-pointer">
       <div className="w-full mx-auto px-4 ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mx-6 sm:mx-20 md:mx-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mx-2 sm:mx-20 md:mx-20">
           {services.map((service, index) => (
             <div
               key={index}

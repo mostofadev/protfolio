@@ -6,7 +6,7 @@ import { ArrowLongRightIcon } from "@heroicons/react/20/solid"
 function HomeTitleContainer({Description='',Title='',Button='',To='',Gray=true}) {
   return (
     <div>
-       <div className={`${Gray ? 'bg-[var(--bg-two)]' : 'bg-[var(--bg-one)]'} py-12 px-6`}>
+       <div className={`${Gray ? 'bg-[var(--bg-two)]' : 'bg-[var(--bg-one)]'} py-12 px-2`}>
       <h2 className="text-[var(--text-one)] pl-8 border-green-500 border-l-4 text-3xl sm:text-5xl lg:text-6xl font-bold mb-8 mx-4 sm:mx-20">
         {Title}
       </h2>

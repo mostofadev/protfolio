@@ -2,7 +2,7 @@
 // eslint-disable-next-line react/prop-types
 function ServicesPricingCard({ data }) {
     return (
-      <div className="p-4">
+      <div className="p-2">
         <div className="bg-[var(--bg-two)] text-center rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300">
           {/* Card Header */}
          <div className="border-b border-gray-200 my-4">
